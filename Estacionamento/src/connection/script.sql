@@ -8,3 +8,15 @@ Create table vaga(
     obliqua boolean not null,
     primary key (idVaga)
 );
+
+Create table motorista (
+    idMotorista int not null AUTO_INCREMENT,
+    nome varchar(250) not null,
+    homem boolean not null,
+    rg varchar(10) not null,
+    cpf varchar(11) not null,
+    celular varchar(11) not null,
+    email varchar(250) not null,
+    senha varchar(250) not null,
+    primary key (idMotorista)
+);
