@@ -123,7 +123,7 @@ public class JFListarVagas extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
-        /*if(jTVaga.getSelectedRow() != -1){
+        if(jTVaga.getSelectedRow() != -1){
             int opcao = JOptionPane.showConfirmDialog(null,
                     "Deseja excluir a vaga selecionada?", "Exclusão",
                     JOptionPane.YES_NO_OPTION);
@@ -137,7 +137,7 @@ public class JFListarVagas extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Selecione uma vaga!","Erro",
                     JOptionPane.ERROR_MESSAGE);
         }
-        readJTable();*/
+        readJTable();
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     public void readJTable(){

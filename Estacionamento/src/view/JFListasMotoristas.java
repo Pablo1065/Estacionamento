@@ -68,16 +68,16 @@ public class JFListasMotoristas extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTMotorista);
 
-        jBtnExcluir.setText("Excluir Vaga");
+        jBtnExcluir.setText("Excluir Motorista");
         jBtnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnExcluirActionPerformed(evt);
             }
         });
 
-        jBtnEditar.setText("Editar Vaga");
+        jBtnEditar.setText("Editar Motorista");
 
-        jBtnCadastrar.setText("Cadastrar Vaga");
+        jBtnCadastrar.setText("Cadastrar Motorista");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -118,21 +118,21 @@ public class JFListasMotoristas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
-        /*if(jTVaga.getSelectedRow() != -1){
+        if(jTMotorista.getSelectedRow() != -1){
             int opcao = JOptionPane.showConfirmDialog(null,
                 "Deseja excluir a vaga selecionada?", "Exclusão",
                 JOptionPane.YES_NO_OPTION);
             if(opcao == 0){
-                VagaDAO dao = new VagaDAO();
-                Vaga v = new Vaga();
-                v.setIdVaga((int)jTVaga.getValueAt(jTVaga.getSelectedRow(), 0));
-                dao.delete(v);
+                MotoristaDAO dao = new MotoristaDAO();
+                Motorista m = new Motorista();
+                m.setIdMotorista((int)jTMotorista.getValueAt(jTMotorista.getSelectedRow(), 0));
+                dao.delete(m);
             }
         }else{
-            JOptionPane.showMessageDialog(null, "Selecione uma vaga!","Erro",
+            JOptionPane.showMessageDialog(null, "Selecione um motorista!","Erro",
                 JOptionPane.ERROR_MESSAGE);
         }
-        readJTable();*/
+        readJTable();
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened

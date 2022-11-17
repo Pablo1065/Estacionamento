@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -149,7 +149,7 @@
     </Container>
     <Component class="javax.swing.JButton" name="jBtnExcluir">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Excluir Vaga"/>
+        <Property name="text" type="java.lang.String" value="Excluir Motorista"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnExcluirActionPerformed"/>
@@ -157,12 +157,12 @@
     </Component>
     <Component class="javax.swing.JButton" name="jBtnEditar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Editar Vaga"/>
+        <Property name="text" type="java.lang.String" value="Editar Motorista"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jBtnCadastrar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Cadastrar Vaga"/>
+        <Property name="text" type="java.lang.String" value="Cadastrar Motorista"/>
       </Properties>
     </Component>
   </SubComponents>
