@@ -76,6 +76,11 @@ public class JFListasMotoristas extends javax.swing.JFrame {
         });
 
         jBtnEditar.setText("Editar Motorista");
+        jBtnEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnEditarActionPerformed(evt);
+            }
+        });
 
         jBtnCadastrar.setText("Cadastrar Motorista");
 
@@ -138,6 +143,19 @@ public class JFListasMotoristas extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
        readJTable();
     }//GEN-LAST:event_formWindowOpened
+
+    private void jBtnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnEditarActionPerformed
+               if(jTMotorista.getSelectedRow() != -1){
+            int motoristaSelecionado = (int)jTMotorista.getValueAt
+                (jTMotorista.getSelectedRow(), 0);
+            JFAtualizarMotorista am = new JFAtualizarMotorista(motoristaSelecionado);
+            am.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(null, "Selecione um motorista!",
+                    "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+        readJTable(); 
+    }//GEN-LAST:event_jBtnEditarActionPerformed
 
     /**
      * @param args the command line arguments
