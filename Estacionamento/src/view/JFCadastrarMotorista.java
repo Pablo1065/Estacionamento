@@ -51,7 +51,8 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
         jTFEmail = new javax.swing.JTextField();
         jTFSenha = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Cadastrar Motorista");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Cadastrar Motorista");
@@ -76,8 +77,18 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
         jRBMasculino.setText("Masculino");
 
         jBtnCancelar.setText("Cancelar");
+        jBtnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnCancelarActionPerformed(evt);
+            }
+        });
 
         jBtnSalvar.setText("Limpar");
+        jBtnSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSalvarActionPerformed(evt);
+            }
+        });
 
         jBtnLimpar.setText("Salvar");
         jBtnLimpar.addActionListener(new java.awt.event.ActionListener() {
@@ -201,6 +212,20 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
         }
         dao.create(m);
     }//GEN-LAST:event_jBtnLimparActionPerformed
+
+    private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
+        dispose();
+    }//GEN-LAST:event_jBtnCancelarActionPerformed
+
+    private void jBtnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSalvarActionPerformed
+        jTFNome.setText("");
+        jTFRg.setText("");
+        jTFCpf.setText("");
+        jTFCelular.setText("");
+        jTFEmail.setText("");
+        jTFSenha.setText("");
+        BGGenero.clearSelection();
+    }//GEN-LAST:event_jBtnSalvarActionPerformed
 
     /**
      * @param args the command line arguments

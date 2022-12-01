@@ -43,7 +43,8 @@ public class JFCadastrarVaga extends javax.swing.JFrame {
         jBtnSalvar = new javax.swing.JButton();
         jBtnLimpar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Cadastra Vaga");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Cadastrar Vaga");
@@ -68,8 +69,18 @@ public class JFCadastrarVaga extends javax.swing.JFrame {
         jRBParalela.setText("Paralela");
 
         jBtnCancelar.setText("Cancelar");
+        jBtnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnCancelarActionPerformed(evt);
+            }
+        });
 
         jBtnSalvar.setText("Limpar");
+        jBtnSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSalvarActionPerformed(evt);
+            }
+        });
 
         jBtnLimpar.setText("Salvar");
         jBtnLimpar.addActionListener(new java.awt.event.ActionListener() {
@@ -153,6 +164,16 @@ public class JFCadastrarVaga extends javax.swing.JFrame {
         }
         dao.create(v);
     }//GEN-LAST:event_jBtnLimparActionPerformed
+
+    private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
+        dispose();
+    }//GEN-LAST:event_jBtnCancelarActionPerformed
+
+    private void jBtnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSalvarActionPerformed
+        jTFNumero.setText("");
+        jTFRua.setText("");
+        BGTipoVaga.clearSelection();
+    }//GEN-LAST:event_jBtnSalvarActionPerformed
 
     /**
      * @param args the command line arguments

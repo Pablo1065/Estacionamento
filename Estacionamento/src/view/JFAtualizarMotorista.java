@@ -68,7 +68,8 @@ public class JFAtualizarMotorista extends javax.swing.JFrame {
         jTFSenha = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Atualizar Motorista");
 
         jLabel3.setText("Rg");
 
@@ -93,8 +94,18 @@ public class JFAtualizarMotorista extends javax.swing.JFrame {
         });
 
         jBtnCancelar.setText("Cancelar");
+        jBtnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnCancelarActionPerformed(evt);
+            }
+        });
 
         jBtnLimpar.setText("Limpar");
+        jBtnLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnLimparActionPerformed(evt);
+            }
+        });
 
         jBtnSalvar.setText("Salvar");
         jBtnSalvar.addActionListener(new java.awt.event.ActionListener() {
@@ -256,6 +267,20 @@ public class JFAtualizarMotorista extends javax.swing.JFrame {
     private void jRBFemininoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRBFemininoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRBFemininoActionPerformed
+
+    private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
+        dispose();
+    }//GEN-LAST:event_jBtnCancelarActionPerformed
+
+    private void jBtnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLimparActionPerformed
+        jTFNome.setText("");
+        jTFRg.setText("");
+        jTFCpf.setText("");
+        jTFCelular.setText("");
+        jTFEmail.setText("");
+        jTFSenha.setText("");
+        jBGGenero.clearSelection();
+    }//GEN-LAST:event_jBtnLimparActionPerformed
 
     /**
      * @param args the command line arguments
